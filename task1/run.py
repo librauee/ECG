@@ -52,7 +52,7 @@ def feature_eng(data, f, feat):
     """
     data[f'{f}_min'] = data[feat].min(1)
     data[f'{f}_max'] = data[feat].max(1)
-    data[f'{f}_meam'] = data[feat].mean(1)
+    data[f'{f}_mean'] = data[feat].mean(1)
     data[f'{f}_std'] = data[feat].std(1)
     data[f'{f}_median'] = data[feat].median(1)
     data[f'{f}_skew'] = data[feat].skew(1)    
