@@ -130,7 +130,8 @@ for i in tqdm(range(12 * 2)):
     feat = [str(j) for j in range(sep_num * i, sep_num * (i + 1))]
     data = feature_eng(data, f=str(i), feat=feat)
 
-    
+train_path = glob.glob('data/train/*.mat')
+test_path = glob.glob('data/val/*.mat')    
 train_path = [i.split('\\')[-1].split('.')[0] for i in train_path]
 test_path = [i.split('\\')[-1].split('.')[0] for i in test_path]
 data['name'] = train_path + test_path
