@@ -127,7 +127,7 @@ def infer(data, f):
     }
     ff = f
     for i in range(5):
-        clf = lgb.Booster(model_file=f'model_with_nn/{ff}_model_{i}.txt')
+        clf = lgb.Booster(model_file=f'model_only/{ff}_model_{i}.txt')
         y_pred = clf.predict(data[features], num_iteration=clf.best_iteration)
         predictions_lgb[:] += y_pred / 5
     # data[f] = [1 if i > 0.5 else 0 for i in predictions_lgb]
