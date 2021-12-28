@@ -24,7 +24,7 @@ warnings.filterwarnings('ignore')
 
 
 # 提取测试集数据特征
-if not os.path.exists('test_feature_base_.pkl'):
+if not os.path.exists('test_feature_base.pkl'):
     path = sys.argv[1]
     test_path = glob.glob(os.path.join(path, '*.mat'))
     test_path = sorted(test_path)
